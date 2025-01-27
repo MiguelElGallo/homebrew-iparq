@@ -6,8 +6,31 @@ class Iparq < Formula
     version "0.1.3"
     sha256 "a876943e2257077ed0d4fa5d4f0c6697c05aa4e1e209aebda24ab997293a4efa"
   
-    depends_on "python@3.9"
+    bottle do
+        rebuild 1
+        sha256 cellar: :any_skip_relocation, arm64_sequoia: "1d907b91a649712809d1ee774c56b098d77824b94e844eeab813ccaa9473b118"
+        sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3317317a40344aa0134a70f9843208e3404de3b9884ff94d3b82903364238a60"
+        sha256 cellar: :any_skip_relocation, arm64_ventura: "6d2d3dd428ea124603044c3191378e9e2d86fc04a96b3d8cbda4265226934627"
+        sha256 cellar: :any_skip_relocation, sonoma:        "6a41000d596987c927ef1f018bb07de8f62aed2c38ee45b2a6bebc30ca5f33ee"
+        sha256 cellar: :any_skip_relocation, ventura:       "06b304505e915cdc75102d3cff1fd089237c454fd2bd73ee7b49fb29aeb9acb8"
+      end
+    
+    depends_on "cmake" => :build
+    depends_on "ninja" => :build
+    depends_on "apache-arrow"
+    depends_on "libpq" # psycopg
+    depends_on "rust" => :build # for pydantic-core
+    depends_on "python@3.11"
   
+    on_linux do
+        depends_on "patchelf" => :build # for pyarrow
+    end
+    
+    resource "pyarrow" do
+        url "https://files.pythonhosted.org/packages/7b/01/fe1fd04744c2aa038e5a11c7a4adb3d62bce09798695e54f7274b5977134/pyarrow-19.0.0.tar.gz"
+        sha256 "8d47c691765cf497aaeed4954d226568563f1b3b74ff61139f2d77876717084b"
+    end
+    
     resource "annotated-types" do
         url "https://files.pythonhosted.org/packages/ee/67/531ea369ba64dcff5ec9c3402f9f51bf748cec26dde048a2f973a4eea7f5/annotated_types-0.7.0.tar.gz"
         sha256 "aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"
@@ -53,10 +76,7 @@ class Iparq < Formula
         sha256 "2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1"
     end
 
-    resource "pyarrow" do
-        url "https://files.pythonhosted.org/packages/7b/01/fe1fd04744c2aa038e5a11c7a4adb3d62bce09798695e54f7274b5977134/pyarrow-19.0.0.tar.gz"
-        sha256 "8d47c691765cf497aaeed4954d226568563f1b3b74ff61139f2d77876717084b"
-    end
+
       
     resource "pydantic" do
         url "https://files.pythonhosted.org/packages/b7/ae/d5220c5c52b158b1de7ca89fc5edb72f304a70a4c540c84c8844bf4008de/pydantic-2.10.6.tar.gz"
