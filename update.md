@@ -1,0 +1,1 @@
+curl -s https://pypi.org/pypi/iparq/0.1.4/json | jq '.urls[1] | {url: .url, sha256: .digests.sha256}'
