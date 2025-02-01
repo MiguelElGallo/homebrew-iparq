@@ -2,8 +2,8 @@ class Iparq < Formula
     include Language::Python::Virtualenv
     desc "Display version and compression of a Parquet File"
     homepage "https://github.com/MiguelElGallo/iparq"
-    url "https://files.pythonhosted.org/packages/e8/90/a1833fd8a1dde9eb55beac2193349e4fe38cfd8b3edbd91a23fea6bbbc06/iparq-0.1.4.tar.gz"
-    sha256 "26f0a4a3e3ae29fff4fb427a3a6a35f2af0b185d7c0cede783b5c45ca18365a6"
+    url "https://files.pythonhosted.org/packages/7c/cc/527180c8b3fcd6bc1d681f05bf68cf1f916b069e6d54de96efefcdc9f9c3/iparq-0.1.5.tar.gz"
+    sha256 "40165405404a4f83309878986f96df32671bdffe4eeaedf86529445bf226fefe"
     license "MIT"
   
     depends_on "cmake" => :build
