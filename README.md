@@ -1,5 +1,10 @@
-# homebrew-iparq
+# Homebrew tap for iParq
 
-Homebrew Repostiory for iparq (Publishes to Homebrew)
+Install [iParq](https://iparq.dev/), the Parquet metadata inspection CLI, with:
 
-See main [repository](https://github.com/MiguelElGallo/iparq)
+```sh
+brew install miguelelgallo/iparq/iparq
+```
+
+The formula tracks the release published on [PyPI](https://pypi.org/project/iparq/).
+Source code and release notes are in the [main repository](https://github.com/MiguelElGallo/iparq).
