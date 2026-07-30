@@ -1,1 +1,6 @@
-curl -s https://pypi.org/pypi/iparq/0.3.0/json | jq '.urls[1] | {url: .url, sha256: .digests.sha256}'
+Get the current iParq source distribution URL and checksum from PyPI:
+
+```sh
+curl -fsSL https://pypi.org/pypi/iparq/json \
+  | jq '.urls[] | select(.packagetype == "sdist") | {url, sha256: .digests.sha256}'
+```
