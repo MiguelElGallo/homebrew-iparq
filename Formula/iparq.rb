@@ -3,8 +3,8 @@ class Iparq < Formula
 
   desc "Inspect Parquet metadata, encodings, compression, indexes, and Bloom filters"
   homepage "https://iparq.dev/"
-  url "https://files.pythonhosted.org/packages/d2/88/770cd5cb7302a7d5aa4987ebe5be6fa25a827c2877a48b965640d78c983f/iparq-0.7.3.tar.gz"
-  sha256 "230253ebc73aca81758718d2a73a4359b8ab8ffa98189d526afff1d73c158e3e"
+  url "https://files.pythonhosted.org/packages/06/13/38f02361590f94b54a55ccce80b399b7c8e9774395942bacbf2351b1d2f0/iparq-0.8.0.tar.gz"
+  sha256 "f7e962b74da434736e703966753e8d459be7ef20975757d14f85102b0e0547d7"
   license "MIT"
 
   depends_on "cmake" => :build # for pyarrow
