@@ -3,8 +3,8 @@ class Iparq < Formula
 
   desc "Inspect Parquet and Vortex storage metadata"
   homepage "https://iparq.dev/"
-  url "https://files.pythonhosted.org/packages/a5/d5/4bb8011ac853c828ea2d04ae61956f4e498a183138fd67e21991caa14d46/iparq-0.8.2.tar.gz"
-  sha256 "5ea9e6d80fcffa06d5a714b3fdd40c605187c933f8add1fde69b4334034e1826"
+  url "https://files.pythonhosted.org/packages/e1/2c/804fdf65f766fd0bd6e69d15e8044d1ce4f7e264e785f5d678850523d5f6/iparq-0.9.0.tar.gz"
+  sha256 "d8e0854aaf6d1a2ae1993946a23454149751b96bd257ca5d465a78d73cb261e9"
   license "MIT"
 
   depends_on "cmake" => :build # for pyarrow
